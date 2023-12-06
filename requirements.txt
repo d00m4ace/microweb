@@ -1,0 +1,10 @@
+beautifulsoup4==4.12.2
+bs4==0.0.1
+Markdown==3.4.3
+pip==23.1.2
+Pygments==2.15.1
+PyYAML==6.0
+setuptools==65.5.0
+six==1.16.0
+soupsieve==2.4.1
+transliterate==1.10.2
