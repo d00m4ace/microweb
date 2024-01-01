@@ -23,6 +23,9 @@ def tags_html_block(posts, posts_tags, posts_tags_url, selected_tag_url):
     for j in range(len(posts_tags)):
         tag = posts_tags[j]
         tags_url = posts_tags_url[j]
+        
+        if not isinstance(tag, str):
+            tag = str(tag)    
 
         html_tag = ""
 

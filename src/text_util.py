@@ -31,9 +31,9 @@ def gen_date_ru(dt):
 def gen_markdown(content):
 
     content = content.replace(
-        '>>youtube>>', '<iframe width="560" height="315" src="https://www.youtube.com/embed/')
+        '>>youtube>>', '<div class="video-container"><iframe src="https://www.youtube.com/embed/')
     content = content.replace(
-        '<<youtube<<', '"frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>')
+        '<<youtube<<', '"frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>')
 
     html = markdown.markdown(content, extensions=[
         'fenced_code', 'codehilite', 'tables'], output_format='html')
@@ -57,6 +57,10 @@ def gen_markdown(content):
 
 
 def translit_rus(rus_str):
+# Convert rus_str to string if it's not
+    if not isinstance(rus_str, str):
+        rus_str = str(rus_str)    
+
     rus_str = rus_str.replace("+", "plus")
     rus_str = rus_str.replace("#", "sharp")
     rus_str = rus_str.replace(".", "dot")

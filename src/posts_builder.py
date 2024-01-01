@@ -57,6 +57,9 @@ def posts_tags_build(posts):
     for i in range(len(posts.posts_content_tags_url)):
         tag_url = posts.posts_content_tags_url[i]
         tag_text = posts.posts_content_tags_text[i]
+        
+        if not isinstance(tag_text, str):
+            tag_text = str(tag_text)  
 
         posts_id = posts.find_posts_id_by_tag_url(tag_url)
         posts_id.sort(reverse=True)
