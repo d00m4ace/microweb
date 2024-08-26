@@ -21,8 +21,25 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-   fetch('/search_index.json')
-        .then(response => response.json())
+    fetch('/search_index.zip')
+        .then(response => response.blob())
+        .then(blob => {
+            return new Promise((resolve, reject) => {
+                const reader = new FileReader();
+                reader.onload = () => resolve(reader.result);
+                reader.onerror = reject;
+                reader.readAsArrayBuffer(blob);
+            });
+        })
+        .then(arrayBuffer => {
+            return new Promise((resolve, reject) => {
+                const zip = new JSZip();
+                zip.loadAsync(arrayBuffer).then(() => {
+                    zip.file('search_index.json').async('string').then(resolve);
+                });
+            });
+        })
+        .then(jsonString => JSON.parse(jsonString))
         .then(pages => {
             // pages is now the array of page data from the JSON file
 

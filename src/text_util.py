@@ -62,7 +62,8 @@ def translit_rus(rus_str):
         rus_str = str(rus_str)    
 
     rus_str = rus_str.replace("+", "plus")
-    rus_str = rus_str.replace("#", "sharp")
+    #rus_str = rus_str.replace("#", "sharp")
+    rus_str = rus_str.replace("#", "")
     rus_str = rus_str.replace(".", "dot")
     rus_str = rus_str.replace("!", "exclamation")
     rus_str = rus_str.replace("/", "slash")

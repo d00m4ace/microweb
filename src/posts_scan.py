@@ -26,6 +26,8 @@ def posts_scan(posts):
             file_util.read_file_strs(posts.posts_files_list[i]))
 
         post_config = text_util.read_config(posts.posts_content[i])
+        
+        post_config['title'] = post_config['title'].replace('№', "#")
 
         if post_config is None:
             print("ERROR: Invalid config blok, not found 2 lines at start with '---' in " +
