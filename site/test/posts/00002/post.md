@@ -1,5 +1,6 @@
 ---
 title: Узнай, что такое Bulma CSS и как она поможет упростить тебе CSS разработку.
+description: 'Обзор проектов D00M4ACE: MMORPG, генераторы сайтов и настольные игры.'
 date: 2022-10-01
 tags: [Development, Go, fast, Blogging, nginx and python,C++,C#]
 ---

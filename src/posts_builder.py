@@ -116,6 +116,9 @@ def posts_tags_cloud_build(posts):
         "{{title}}", posts.posts_config['posts_cloud_title'])
 
     html = html.replace(
+        "{{description}}", f'<meta name="description" content="{posts.posts_config["posts_cloud_title"]}"/>')
+
+    html = html.replace(
         "{{content}}", html_tags)
 
     html = html.replace(

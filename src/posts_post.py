@@ -24,6 +24,9 @@ def posts_html_header(html_template, post_link, posts, i):
     html = html.replace(
         "{{title}}", posts.posts_content_cfg[i]['title'])
 
+    html = html.replace(
+        "{{description}}", f'<meta name="description" content="{posts.posts_content_cfg[i]["description"]}"/>')
+
     post_date_ru = text_util.gen_date_ru(posts.posts_content_cfg[i]['date'])
 
     html = html.replace(
@@ -137,6 +140,9 @@ def posts_html_list_with_paginate(posts, html_base, html_base_title, output_html
 
         html = html_base.replace(
             "{{title}}", html_base_title + ' - ' + str(p+1))
+
+        html = html.replace(
+            "{{description}}", f'<meta name="description" content="{posts.posts_config["posts_list_title"]}"/>')
 
         if len(pages) > 1:
             html = html.replace(

@@ -1,5 +1,6 @@
 ---
 title: I like to roar
+description: 'Обзор проектов D00M4ACE: MMORPG, генераторы сайтов и настольные игры.'
 date: 2022-04-03
 project_url: https://github.com/gohugoio/hugo
 tags: [Go, ZX Spec, Blog]

@@ -1,5 +1,6 @@
 ---
 title: This is a text in **Markdown**!
+description: 'Обзор проектов D00M4ACE: MMORPG, генераторы сайтов и настольные игры.'
 date: 2022-04-01
 categories:
 project_url: https://github.com/gohugoio/hugo

@@ -63,6 +63,9 @@ def gen_html(posts):
         html = html.replace(
             "{{title}}", posts.posts_content_cfg[i]['title'])
 
+        html = html.replace(
+            "{{description}}", f'<meta name="description" content="{posts.posts_content_cfg[i]["description"]}"/>')
+
         html_content = posts_post.posts_html_header(posts.posts_config['html_templates_content']['post_header'],
                                                     "", posts, i)
 

@@ -1,5 +1,6 @@
 ---
 title: Today I made friends
+description: 'Обзор проектов D00M4ACE: MMORPG, генераторы сайтов и настольные игры.'
 date: 2022-04-02
 project_url: https://github.com/gohugoio/hugo
 tags: [Development, Go, fast, Cars]

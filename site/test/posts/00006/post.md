@@ -1,5 +1,6 @@
 ---
 title: Code blocks must be indented by 4 whitespaces.111
+description: 'Обзор проектов D00M4ACE: MMORPG, генераторы сайтов и настольные игры.'
 title2: Пример кода на Python
 date: 2022-04-30
 categories:
